@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clique a baixo hihi</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(11, 12, 12);
+            color: rgb(255, 115, 1);
+            
+            
+        }
+        .gay{
+            color: #FFF;
+            background-color: green;
+            border: none;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        
+        }
+        .menssage{
+            display: none;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clica...</h1>
+    <button class="gay" id="playSounds">Sim</button>
+    <audio id="audio1" src="audio.mp3"></audio>
+    <p id="menssage" class="menssage">você da o cuuuuuu akkakak</p>
+
+    <script>
+        document.getElementById("playSounds").addEventListener("click", function() {
+            const audio1 = document.getElementById("audio1");
+            const menssage = document.getElementById("menssage")
+            
+            audio1.volume = 1.0;
+
+           
+            audio1.play();
+            audio1.onended = function() {
+                audio2.play();
+            };
+            menssage.style.display = "block";
+
+            setTimeout(function() {
+                menssage.style.display = "none";
+            }, 11000);
+        });
+    </script>
+</body>
+</html>
